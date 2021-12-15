@@ -16,8 +16,11 @@ def hello_world():
 
 def gfg():
    return 'geeksforgeeks'
-
 app.add_url_rule('/gfg', 'g2g', gfg)
+
+@app.route('/hello/<name>')
+def hello_name(name):
+   return 'Hello %s!' % name
 
 
 
